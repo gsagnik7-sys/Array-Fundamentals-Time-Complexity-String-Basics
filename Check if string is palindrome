@@ -1,0 +1,18 @@
+Python-->
+class Solution:
+    def isPalindrome(self, s):
+        return s == s[::-1]
+
+c-->
+bool isPalindrome(char str[]) {
+    int left = 0;
+    int right = strlen(str) - 1;
+
+    while (left < right) {
+        if (str[left] != str[right])
+            return false;
+        left++;
+        right--;
+    }
+    return true;
+}
