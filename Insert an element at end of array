@@ -1,0 +1,24 @@
+Python -->
+class Solution:
+    def insertAtEnd(self, arr, val):
+        arr.append(val)
+        return arr
+
+c-->
+#include <stdio.h>
+void insertAtEnd(int arr[], int *size, int val) {
+    arr[*size] = val;
+    (*size)++;
+}
+int main() {
+    int arr[100] = {1, 2, 3, 4, 5}; 
+    int size = 5;                   
+    int val = 90;
+    insertAtEnd(arr, &size, val);
+    printf("Array after insertion: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
